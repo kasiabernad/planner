@@ -1,0 +1,10 @@
+@mixin sidenav-cell-centered($height) {
+  line-height: $height;
+  height: $height;
+  a {
+    i {
+      height: $height;
+      line-height: $height;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.sidenav {
+  width: $sidenav-width;
+  background-color: $dark-gray;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: calc(100% + #{$footer-height});
+  padding-bottom: $footer-height;
+  margin: 0;
+
+  li {
+    @include sidenav-cell-centered($sidebar-cell-height);
+
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+
+    a {
+      position: relative;
+      color: white;
+      display: block;
+      font-size: 1rem;
+      font-weight: 500;
+
+    }
+
+    &.logo {
+      @include sidenav-cell-centered(80px);
+
+      background-color: white;
+      i {
+        font-size: 2rem;
+        color: $green;
+      }
+    }
+  }
+}

@@ -1,7 +1,4 @@
-steps-line {
-  height: 70vh;
-  overflow: auto;
-
+.steps-line {
   ul {
     margin: -5px auto;
     list-style: none;
@@ -87,48 +84,31 @@ steps-line {
           justify-content: space-evenly;
           align-items: flex-end;
           flex-wrap: wrap;
-
-          button {
+          margin-top: 3rem;
+          
+          a {
             text-transform: uppercase;
             cursor: pointer;
           }
 
-          .pass {
+          .done {
             color: $green;
           }
-          .warning {
-            color: $yellow;
-          }
-          .fail {
-            color: $red;
-          }
-          .issue {
-            color: $blue;
+          .undone {
+            color: red;
           }
         }
 
-        &.result-pass {
+        &.result-done {
           justify-content: flex-end;
           display: flex;
           color: $green;
         }
 
-        &.result-warning{
+        &.result-undone{
           justify-content: flex-end;
           display: flex;
-          color: $yellow;
-        }
-
-        &.result-fail {
-          justify-content: flex-end;
-          display: flex;
-          color: $red;
-        }
-
-        &.result-issue {
-          justify-content: flex-end;
-          display: flex;
-          color: $blue;
+          color: red;
         }
       }
     }

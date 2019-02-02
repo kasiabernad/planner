@@ -1,0 +1,17 @@
+nav.navbar {
+  color: white;
+  position: relative;
+  left: $sidenav-width;
+  background-color: $green;
+  width: calc(100% - #{$sidenav-width});
+  height: $navbar-height;
+  overflow: hidden;
+  .navbar-wrapper {
+    margin: 0 1rem;
+    height:  $navbar-height;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+}

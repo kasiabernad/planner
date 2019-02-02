@@ -1,15 +1,12 @@
-.lighter-green {
-  background-color: $green
-}
-
 .list-row {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 0
+  height: 100%;
 }
 
 .list-col-3 {
-  flex: 33.33%
+  flex: 33.33%;
+  background-color: $mid-gray;
 }
 
 .list-col-9 {
@@ -29,17 +26,21 @@
   min-height: $stripe-height;
   font-weight: normal;
   color: white;
+  background-color: $dark-green;
+  .active {
+    border-bottom: 1px solid $green;
+  }
   &.search {
+    background-color: $gray;
+    color: $dark-gray;
     justify-content: space-between;
-    height: $stripe-height + 10px;
+    height: $stripe-height;
   }
 }
 
 .list {
   display: flex;
   flex-direction: column;
-  background-color: $mid-gray;
-  height: 85vh;
   overflow-y: auto;
 
   .list-item {
@@ -108,10 +109,9 @@
   }
 }
 
-.runs-header {
+.main-header {
   background-color: white;
   min-height: 280px;
-  width: 100%;
   padding: 24px 40px;
   display: flex;
   background: linear-gradient(25deg, rgba(255, 255, 255, 0.5) 71%, rgba(65, 167, 139, 0.3) 66%), linear-gradient(160deg, rgb(255,255,255) 66%, rgba(45, 80, 193, 0.3) 66%);
@@ -123,7 +123,7 @@
    min-width: 250px;
   }
 
-  .buttons-group {
+  .actions {
     width: 50%;
     min-width: 250px;
     margin: auto 0;
@@ -132,18 +132,24 @@
     flex-wrap: wrap;
     flex-direction: row-reverse;
 
-    .btn {
-      margin-right: 20px;
-      margin-bottom: 10px;
-      padding: 0 2rem;
+    .green {
+      background-color: $green;
+      color: white;
     }
     a {
-
+      margin-right: 20px;
+      margin-bottom: 10px;
+      padding: 1rem 2rem;
+      background-color: $gray;
+      border-radius: .2rem;
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase;
     }
+
     .bwhite {
       font-weight: 500;
     }
-
   }
   .small-info {
     opacity: 0.5;
@@ -166,21 +172,18 @@
     font-weight: 500;
     margin: 10px 0;
   }
-
+  .tags {
+    display: flex;
+  }
   .tag-item {
     color: $tail;
     text-decoration: underline;
-    margin-right: 10px
+    margin-right: 10px;
+    font-weight: 500;
   }
 }
 
 .steps-line{
   position: relative;
-}
-
-.margin-top-overlap {
-   @media #{$medium-and-down} {
-    margin-top: 0;
-  }
-  margin-top: -5rem;
+  margin-bottom: 3rem;
 }
