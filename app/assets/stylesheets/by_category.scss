@@ -60,8 +60,7 @@
   }
   .subcategory-with-checkboxes {
     grid-area: subcategory-with-checkboxes;
-    align-self: center;
-    justify-self: start;
+    place-self: center;
     .items {
       display: flex;
       flex-direction: columns;
