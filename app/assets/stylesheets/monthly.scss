@@ -1,0 +1,30 @@
+.table-header {
+  margin: $table-margin;
+}
+table.monthly {
+  background-color: white;
+  margin: $table-margin;
+  border: 1px solid $green;
+  table-layout: fixed ;
+  width: calc(100% - 2 * #{$table-margin});
+  th {
+    background-color: $light-green;
+    padding: 0.5rem;
+    text-align: left;
+    border-bottom: 1px solid $green;
+  }
+  td {
+    vertical-align: top;
+    width: calc(100% / #{$days-in-week});
+    padding: 1rem;
+    text-align: left;
+    ul {
+      margin-left: 1rem;
+      list-style-type: square;
+      line-height: 1.2rem;
+    }
+    &.with-tasks {
+      background-color: $lighter-green;
+    }
+  }
+}
